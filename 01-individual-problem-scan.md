@@ -1,0 +1,120 @@
+# 01 — Individual Problem Scan
+
+## Scan rộng 
+
+| #  | Lăng kính     | Problem                                            | Ai đang đau?        | Dấu hiệu thật            |
+| -- | ------------- | -------------------------------------------------- | ------------------- | ------------------------ |
+| 1  | Quy trình     | Quyết định và feedback từ cấp trên không nhất quán | Thành viên cấp dưới | Task bị revise nhiều lần |
+| 2  | Công bằng     | Có dấu hiệu thiên vị giới tính trong đánh giá      | Những người giới tính nữ        | Ý kiến bị bỏ qua         |
+| 3  | Tốn thời gian | Đi đường dài đi học                                | Sinh viên ở xa      | 70 phút/lượt             |
+| 4  | Hiệu suất     | Thành viên trì hoãn công việc                      | Nhóm                | Task trễ deadline        |
+| 5  | Hiệu suất     | Thiếu ngủ ảnh hưởng năng lượng                     | Cá nhân/team        | Ngủ 5 tiếng/ngày         |
+
+
+## Top 3 Problems
+
+| Rank | Problem                              | Vì sao chọn                 | Chưa chắc                  |
+| ---- | ------------------------------------ | --------------------------- | -------------------------- |
+| 1    | Feedback không nhất quán từ cấp trên | Workflow rõ + lặp lại nhiều | Có đủ data để đo chưa      |
+| 2    | Thành viên trì hoãn công việc        | Impact trực tiếp team       | Có giải bằng AI được không |
+| 3    | Đi học mất nhiều thời gian           | Rất tốn thời gian           | Khó áp dụng AI             |
+
+---
+
+# Problem Card #1
+
+## Problem 1
+
+Feedback và quyết định từ cấp trên không nhất quán, khiến task bị sửa nhiều lần và tốn thời gian.
+
+## Actor
+
+* Sinh viên / thành viên nhóm / cấp dưới
+
+## Context
+
+* Khi làm assignment / task nhóm
+* Sau khi nộp → nhận feedback → sửa → lại bị đổi ý
+
+## Current Workflow
+
+```text
+1. Làm task theo yêu cầu ban đầu
+2. Nộp cho cấp trên
+3. Nhận feedback
+4. Sửa lại
+5. Nộp lại
+6. Nhận feedback mới (khác trước)
+7. Lặp lại nhiều lần
+```
+
+## Bottleneck
+
+Feedback không rõ ràng / thay đổi liên tục
+
+## Impact
+
+* Mất thời gian sửa đi sửa lại
+* Gây frustration cho người làm
+* Giảm hiệu suất team
+
+## Success Metric
+
+* Giảm số lần revise (ví dụ: từ 3-4 lần → 1-2 lần)
+* Giảm thời gian hoàn thành task
+
+## Non-AI Solution
+
+* Checklist yêu cầu rõ ràng
+* Template feedback
+
+👉 Nhưng:
+
+* Vẫn phụ thuộc vào con người → không ổn định
+
+## AI Hypothesis
+
+👉 AI có thể:
+
+* Chuẩn hóa yêu cầu
+* Tóm tắt feedback rõ ràng
+* So sánh feedback cũ vs mới
+
+## Quick gut
+
+👉 **Workflow**
+
+---
+
+## DRAFT CURRENT WORKFLOW 
+
+CURRENT STATE — ~60-80 phút 
+
+[1 Làm task: 20']
+→ [2 Submit: 2']
+→ [3 Nhận feedback không rõ: 10']
+→ [4 Revise: 15']
+→ [5 Nhận feedback thay đổi: 10']  <-- bottleneck
+→ [6 Revise again: 15']
+→ [7 Submit: 2']
+
+---
+
+## DRAFT FUTURE WORKFLOW
+
+FUTURE STATE — ~30-40 phút
+
+[1 Làm task: 20']
+→ [2 Submit: 2']
+→ [3 AI chuẩn hóa feedback: 2']
+→ [4 AI highlight inconsistency: 1']
+→ [5 User revise: 10']   <-- human boundary
+→ [6 Submit: 2']
+
+---
+
+# Problem Cards #2 và #3 — Tóm tắt
+| Card                                     | Actor           | Bottleneck                                  | Metric                  | Quick gut | Vì sao chưa chọn làm #1                                    |
+| ---------------------------------------- | --------------- | ------------------------------------------- | ----------------------- | --------- | ---------------------------------------------------------- |
+| **Trì hoãn công việc trong nhóm**        | Thành viên nhóm | Không bắt đầu task đúng hạn, thiếu động lực | Giảm task trễ deadline  | Workflow  | Có thể giải bằng rule/quản lý trước, chưa cần AI mạnh      |
+| **Đi học mất nhiều thời gian (70 phút)** | Sinh viên ở xa  | Thời gian di chuyển dài, không tối ưu       | Giảm thời gian lãng phí | Rule      | Không phải problem phù hợp cho AI (khó can thiệp workflow) |
