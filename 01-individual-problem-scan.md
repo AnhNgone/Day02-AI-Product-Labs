@@ -68,13 +68,13 @@ Feedback không rõ ràng / thay đổi liên tục
 * Checklist yêu cầu rõ ràng
 * Template feedback
 
-👉 Nhưng:
+Nhưng:
 
 * Vẫn phụ thuộc vào con người → không ổn định
 
 ## AI Hypothesis
 
-👉 AI có thể:
+AI có thể:
 
 * Chuẩn hóa yêu cầu
 * Tóm tắt feedback rõ ràng
@@ -82,21 +82,26 @@ Feedback không rõ ràng / thay đổi liên tục
 
 ## Quick gut
 
-👉 **Workflow**
+**Workflow**
 
 ---
 
 ## DRAFT CURRENT WORKFLOW 
+CURRENT STATE — ~60-80 phút
 
-CURRENT STATE — ~60-80 phút 
-
-[1 Làm task: 20']
-→ [2 Submit: 2']
-→ [3 Nhận feedback không rõ: 10']
-→ [4 Revise: 15']
-→ [5 Nhận feedback thay đổi: 10']  <-- bottleneck
-→ [6 Revise again: 15']
-→ [7 Submit: 2']
+[1] Do Task (20')
+    ↓
+[2] Submit (2')
+    ↓
+[3] Receive unclear feedback (10')
+    ↓
+[4] Revise based on unclear feedback (15')
+    ↓
+[5] Receive changed/inconsistent feedback (10')   ← 🔴 BOTTLENECK
+    ↓
+[6] Revise again (15')
+    ↓
+[7] Submit again (2')
 
 ---
 
