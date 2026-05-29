@@ -90,13 +90,16 @@ AI có thể:
 
 CURRENT STATE — ~60-80 phút 
 
-[1 Làm task: 20']
-→ [2 Submit: 2']
-→ [3 Nhận feedback không rõ: 10']
-→ [4 Revise: 15']
-→ [5 Nhận feedback thay đổi: 10']  <-- bottleneck
-→ [6 Revise again: 15']
-→ [7 Submit: 2']
+```mermaid
+flowchart LR
+    A[1 Làm task: 20'] --> B[2 Submit: 2']
+    B --> C[3 Nhận feedback không rõ: 10']
+    C --> D[4 Revise: 15']
+    D --> E[5 Nhận feedback thay đổi: 10' ⚠️ Bottleneck]
+    E --> F[6 Revise again: 15']
+    F --> G[7 Submit: 2']
+
+    style E fill:#ffcccc,stroke:#ff0000,stroke-width:2px
 
 ---
 
