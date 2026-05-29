@@ -89,19 +89,30 @@ AI có thể:
 ## DRAFT CURRENT WORKFLOW 
 CURRENT STATE — ~60-80 phút
 
-[1] Do Task (20')
-    ↓
-[2] Submit (2')
-    ↓
-[3] Receive unclear feedback (10')
-    ↓
-[4] Revise based on unclear feedback (15')
-    ↓
-[5] Receive changed/inconsistent feedback (10')   ← 🔴 BOTTLENECK
-    ↓
-[6] Revise again (15')
-    ↓
-[7] Submit again (2')
+graph TD
+    %% Định nghĩa phong cách (Style)
+    classDef normal fill:#f9f9f9,stroke:#333,stroke-width:2px,rounded;
+    classDef bottleneck fill:#ffcccc,stroke:#cc0000,stroke-width:3px,font-weight:bold;
+
+    %% Các bước trong Flow
+    1["[1] Do Task (20')"] :::normal
+    2["[2] Submit (2')"] :::normal
+    3["[3] Receive unclear feedback (10')"] :::normal
+    4["[4] Revise based on unclear feedback (15')"] :::normal
+    5["[5] Receive changed/inconsistent feedback (10') <br> 🔴 BOTTLENECK"] :::bottleneck
+    6["[6] Revise again (15')"] :::normal
+    7["[7] Submit again (2')"] :::normal
+
+    %% Luồng liên kết
+    1 --> 2
+    2 --> 3
+    3 --> 4
+    4 --> 5
+    5 --> 6
+    6 --> 7
+
+    %% Mũi tên quay ngược lại bottleneck (nếu cần nhấn mạnh vòng lặp)
+    5 -.-> |Gây chậm trễ| 5
 
 ---
 
