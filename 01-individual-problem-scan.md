@@ -87,33 +87,16 @@ AI có thể:
 ---
 
 ## DRAFT CURRENT WORKFLOW 
-CURRENT STATE — ~60-80 phút
 
-```mermaid
-graph TD
-    %% Định nghĩa màu sắc giao diện (Style)
-    classDef normal fill:#f4f5f7,stroke:#cdcdcd,stroke-width:2px,rounded,color:#333333;
-    classDef bottleneck fill:#ffebe6,stroke:#ff5630,stroke-width:3px,font-weight:bold,color:#bf2600;
+CURRENT STATE — ~60-80 phút 
 
-    %% Định nghĩa các bước (Nodes)
-    1["[1] Do Task <br> ⏱️ 20 phút"] :::normal
-    2["[2] Submit <br> ⏱️ 2 phút"] :::normal
-    3["[3] Receive unclear feedback <br> ⏱️ 10 phút"] :::normal
-    4["[4] Revise based on unclear feedback <br> ⏱️ 15 phút"] :::normal
-    5["[5] Receive changed/inconsistent feedback <br> ⏱️ 10 phút <br> 🔴 BOTTLENECK"] :::bottleneck
-    6["[6] Revise again <br> ⏱️ 15 phút"] :::normal
-    7["[7] Submit again <br> ⏱️ 2 phút"] :::normal
-
-    %% Thiết lập các đường nối luồng đi xuống
-    1 --> 2
-    2 --> 3
-    3 --> 4
-    4 --> 5
-    5 --> 6
-    6 --> 7
-
-    %% Nhấn mạnh vòng lặp lãng phí quay ngược lại do feedback không nhất quán
-    5 -.-> |Feedback không đồng nhất bắt buộc sửa lại| 4
+[1 Làm task: 20']
+→ [2 Submit: 2']
+→ [3 Nhận feedback không rõ: 10']
+→ [4 Revise: 15']
+→ [5 Nhận feedback thay đổi: 10']  <-- bottleneck
+→ [6 Revise again: 15']
+→ [7 Submit: 2']
 
 ---
 
