@@ -21,9 +21,9 @@
 | Content generation   | Nhờ AI viết nội dung theo format yêu cầu  | Tạo bản nháp nhanh, đúng cấu trúc              | AI có lúc “bịa” nội dung hoặc viết chung chung        | Yêu cầu viết lại + chỉnh sửa để đúng thực tế và rõ ràng hơn            |
 
 ## Bài học
- Không phải vấn đề nào AI cũng có thể giải quyết được
- Không nên quá phụ thuộc vào AI khi kiến thức chưa đầy đủ vì có thể AI sẽ đưa ra kết quả sai
- Không phải lúc nào AI cũng hiểu được ý của user, nên review lại trước khi đưa ra kết quả cuối cùng
+* Không phải vấn đề nào AI cũng có thể giải quyết được
+* Không nên quá phụ thuộc vào AI khi kiến thức chưa đầy đủ vì có thể AI sẽ đưa ra kết quả sai
+* Không phải lúc nào AI cũng hiểu được ý của user, nên cần review lại trước khi đưa ra kết quả cuối cùng
 
  
  
