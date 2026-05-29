@@ -89,21 +89,22 @@ AI có thể:
 ## DRAFT CURRENT WORKFLOW 
 CURRENT STATE — ~60-80 phút
 
+```mermaid
 graph TD
-    %% Định nghĩa phong cách (Style)
-    classDef normal fill:#f9f9f9,stroke:#333,stroke-width:2px,rounded;
-    classDef bottleneck fill:#ffcccc,stroke:#cc0000,stroke-width:3px,font-weight:bold;
+    %% Định nghĩa màu sắc giao diện (Style)
+    classDef normal fill:#f4f5f7,stroke:#cdcdcd,stroke-width:2px,rounded,color:#333333;
+    classDef bottleneck fill:#ffebe6,stroke:#ff5630,stroke-width:3px,font-weight:bold,color:#bf2600;
 
-    %% Các bước trong Flow
-    1["[1] Do Task (20')"] :::normal
-    2["[2] Submit (2')"] :::normal
-    3["[3] Receive unclear feedback (10')"] :::normal
-    4["[4] Revise based on unclear feedback (15')"] :::normal
-    5["[5] Receive changed/inconsistent feedback (10') <br> 🔴 BOTTLENECK"] :::bottleneck
-    6["[6] Revise again (15')"] :::normal
-    7["[7] Submit again (2')"] :::normal
+    %% Định nghĩa các bước (Nodes)
+    1["[1] Do Task <br> ⏱️ 20 phút"] :::normal
+    2["[2] Submit <br> ⏱️ 2 phút"] :::normal
+    3["[3] Receive unclear feedback <br> ⏱️ 10 phút"] :::normal
+    4["[4] Revise based on unclear feedback <br> ⏱️ 15 phút"] :::normal
+    5["[5] Receive changed/inconsistent feedback <br> ⏱️ 10 phút <br> 🔴 BOTTLENECK"] :::bottleneck
+    6["[6] Revise again <br> ⏱️ 15 phút"] :::normal
+    7["[7] Submit again <br> ⏱️ 2 phút"] :::normal
 
-    %% Luồng liên kết
+    %% Thiết lập các đường nối luồng đi xuống
     1 --> 2
     2 --> 3
     3 --> 4
@@ -111,8 +112,8 @@ graph TD
     5 --> 6
     6 --> 7
 
-    %% Mũi tên quay ngược lại bottleneck (nếu cần nhấn mạnh vòng lặp)
-    5 -.-> |Gây chậm trễ| 5
+    %% Nhấn mạnh vòng lặp lãng phí quay ngược lại do feedback không nhất quán
+    5 -.-> |Feedback không đồng nhất bắt buộc sửa lại| 4
 
 ---
 
