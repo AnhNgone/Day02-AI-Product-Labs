@@ -108,12 +108,21 @@ flowchart LR
 
 FUTURE STATE — ~30-40 phút
 
-[1 Làm task: 20']
-→ [2 Submit: 2']
-→ [3 AI chuẩn hóa feedback: 2']
-→ [4 AI highlight inconsistency: 1']
-→ [5 User revise: 10']   <-- human boundary
-→ [6 Submit: 2']
+```mermaid
+flowchart LR
+    A["1 Làm task: 20'"] --> B["2 Submit: 2'"]
+    B --> C["3 AI chuẩn hóa feedback: 2'"]
+    C --> D["4 AI highlight inconsistency: 1'"]
+    D --> E["5 User revise: 10'"]
+    E --> F["6 Submit: 2'"]
+
+    %% Highlight AI steps
+    style C fill:#e6f3ff,stroke:#3399ff
+    style D fill:#e6f3ff,stroke:#3399ff
+
+    %% Highlight Human step (boundary)
+    style E fill:#fff2cc,stroke:#ff9900,stroke-width:2px
+```
 
 ---
 
